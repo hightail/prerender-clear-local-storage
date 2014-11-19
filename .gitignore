@@ -1,0 +1,14 @@
+# vim swap files
+*.swp
+
+# mac
+*.DS_Store
+
+# IntelliJ
+/.idea
+*.iml
+
+# /src/
+node_modules
+bower_components
+

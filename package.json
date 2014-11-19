@@ -1,0 +1,27 @@
+{
+  "name": "prerender-clear-local-storage",
+  "version": "1.0.0",
+  "description": "Plugin for Prerender that clears PhantomJS's local storage before each request",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hightail/prerender-clear-local-storage.git"
+  },
+  "keywords": [
+    "prerender",
+    "localstorage",
+    "local",
+    "offline",
+    "storage",
+    "phantom"
+  ],
+  "author": "Justin Fiedler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hightail/prerender-clear-local-storage/issues"
+  },
+  "homepage": "https://github.com/hightail/prerender-clear-local-storage"
+}
