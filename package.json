@@ -1,6 +1,6 @@
 {
   "name": "prerender-clear-local-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plugin for Prerender that clears PhantomJS's local storage before each request",
   "main": "index.js",
   "scripts": {
