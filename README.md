@@ -29,12 +29,7 @@ This plugin uses the env variable PHANTOM_LOCAL_STORAGE_PATH to determine what l
 
 This defaults to *./LocalStorage/*.localstorage* which unfortunately is useless since I cannot get PhantomJS's "--local-storage-path" to work.
 
-You will need to set this to be the location of the PhantomJS .localstorage files on your machine.
-
-Here are some places to look:
-
-* OSX */Users/user.name//Library/Application Support/Ofi Labs/PhantomJS/*
-* Windows - *C:\Documents and Settings\user\Local Settings\Application Data\Ofi Labs\PhantomJS*
+You will need to set this to be the location of the PhantomJS .localstorage files on your machine. See [Phantom Local Storage Locations](#phantom-local-storage-locations) for some suggestions.
 
 Additionally this variable is used as a glob path so you will need to provide the wildcard of your choice. I recommend using *.localstorage so that only .localstorage files are removed.
 
@@ -48,11 +43,22 @@ You can set this variable via the commandline as shown below or if you use grunt
 PHANTOM_LOCAL_STORAGE_PATH=/path/to/phantom/localstorage/*.localstorage node server.js
 ```
 
+##Phantom Local Storage Locations
+###OSX
+```
+/Users/user.name//Library/Application Support/Ofi Labs/PhantomJS/
+```
+
+###Windows
+```
+C:\Documents and Settings\user\Local Settings\Application Data\Ofi Labs\PhantomJS
+```
+
 #Server Code example (server.js)
 
 ```
 var prerender = require('prerender');
-var clearLocalStoragePlugin = require('./plugins/phantom-clear-local-storage');
+var clearLocalStoragePlugin = require('prerender-clear-local-storage');
 
 var server = prerender({
   workers: process.env.PHANTOM_CLUSTER_NUM_WORKERS || 1,
